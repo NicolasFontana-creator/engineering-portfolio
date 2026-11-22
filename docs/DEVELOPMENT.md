@@ -1,43 +1,44 @@
-# Development Guide
+# Guía de desarrollo / Development Guide
 
-Technical instructions for maintaining Engineering-Portfolio.
+Este archivo contiene instrucciones para mantener el sitio web. No forma parte de la presentación profesional principal.
 
-## Requirements
+## Requisitos
 
-Install a Node.js version compatible with the project's Astro version. npm comes with Node.js. A code editor and Git are recommended.
+- Node.js en una versión compatible con la versión de Astro del proyecto.
+- npm (incluido con Node.js).
+- Editor de código y Git (recomendados).
 
-## Project organization
+## Ejecución local
 
-- `src/pages/`: website pages.
-- `src/components/`: reusable UI components.
-- `src/data/projects.ts`: project catalog.
-- `src/layouts/`: shared HTML layout.
-- `src/styles/`: responsive styling.
-- `public/`: public static assets.
-- `.github/workflows/`: CI/CD workflows, when configured.
-
-## Local development
-
-From a terminal opened at the repository root:
+Desde una terminal ubicada en la carpeta raíz del repositorio:
 
 ```bash
 npm install
 npm run dev
 ```
 
-`npm install` installs dependencies listed in `package.json`. `npm run dev` starts the Astro development server and prints the local URL.
+- `npm install`: instala las dependencias de `package.json`.
+- `npm run dev`: inicia el servidor de desarrollo y muestra su URL local.
 
-## Production build and preview
+## Compilación y revisión
 
 ```bash
 npm run build
 npm run preview
 ```
 
-`npm run build` generates the production site in `dist/`. `npm run preview` launches a local server to inspect that result.
+- `npm run build`: genera el sitio estático en `dist/`.
+- `npm run preview`: permite revisar esa versión localmente.
 
-## Project updates
+## Organización del código
 
-Edit `src/data/projects.ts` to update project metadata. Add the optional `url` property only when a project's independent repository is ready to share.
+- `src/pages/`: páginas.
+- `src/components/`: componentes reutilizables.
+- `src/layouts/`: plantillas compartidas.
+- `src/styles/`: estilos.
+- `src/data/projects.ts`: catálogo de proyectos.
+- `public/`: recursos estáticos.
 
-Do not upload credentials, personal data, confidential documents, or unverified experimental results.
+## Actualización de proyectos
+
+Editar `src/data/projects.ts`. Agregar enlaces a los repositorios independientes solo cuando estén listos para publicarse. No incluir credenciales, información confidencial ni resultados experimentales que no hayan sido verificados.

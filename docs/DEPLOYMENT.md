@@ -1,18 +1,16 @@
-# Deployment Guide
+# Guía de publicación / Deployment Guide
 
-Technical instructions for deploying Engineering-Portfolio with GitHub Pages.
+Este archivo documenta el procedimiento para publicar Engineering-Portfolio mediante GitHub Pages.
 
-## Publication address
-
-The intended URL is:
+## Dirección prevista
 
 `https://nicolasfontana-creator.github.io/engineering-portfolio/`
 
-It will become accessible after a successful first deployment.
+La URL será accesible después de completar correctamente el despliegue.
 
-## Astro project-site configuration
+## Configuración de Astro
 
-`astro.config.mjs` contains:
+En `astro.config.mjs`:
 
 ```js
 import { defineConfig } from 'astro/config';
@@ -24,21 +22,12 @@ export default defineConfig({
 });
 ```
 
-The `base` value must reflect the repository name.
+## Publicación con GitHub Pages
 
-## GitHub Pages configuration
+1. Ingresar a **Settings → Pages** en el repositorio.
+2. Seleccionar **GitHub Actions** en **Build and deployment → Source**.
+3. Verificar que exista un workflow de compilación y publicación en `.github/workflows/`.
+4. Comprobar en **Actions** que el workflow se ejecute correctamente.
+5. Abrir la URL pública y verificar navegación, enlaces y diseño responsive.
 
-1. Navigate to **Settings → Pages** in the repository.
-2. Choose **GitHub Actions** under **Build and deployment**.
-3. Confirm that a working build-and-deploy workflow exists in `.github/workflows/`.
-4. Inspect the **Actions** tab for successful compilation and deployment.
-5. Open the published URL and verify its navigation and layout.
-
-Uploading an Astro source repository alone does not publish it: a deployment workflow must build and upload the generated static site.
-
-## Deployment checks
-
-- Confirm the Astro build completes.
-- Test navigation and all external links.
-- Test responsive layout and accessibility.
-- Avoid committing sensitive credentials.
+Subir el código fuente de Astro al repositorio no publica automáticamente el sitio: es necesario compilarlo y desplegar el resultado.

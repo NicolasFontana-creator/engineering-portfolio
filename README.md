@@ -1,41 +1,43 @@
 # Engineering-Portfolio
 
-**Electronic Engineering Student Portfolio**
+**Idioma:** 🇦🇷 Español | [🇬🇧 English](README.en.md)
 
-Professional portfolio showcasing academic and technical projects developed during my Electronic Engineering studies at Universidad Tecnológica Nacional — Facultad Regional Paraná (UTN-FRP).
+### Portfolio de Ingeniería Electrónica
 
-My work focuses on telecommunications, networking, wireless communications, electronic systems, and data acquisition and visualization.
+Soy estudiante avanzado de **Ingeniería Electrónica** en la **Universidad Tecnológica Nacional, Facultad Regional Paraná (UTN-FRP)**. Este portfolio reúne proyectos académicos y desarrollos técnicos relacionados con telecomunicaciones, infraestructura de redes, sistemas inalámbricos y electrónica.
 
-## Areas of Technical Knowledge
+El objetivo es presentar el problema abordado, la metodología de ingeniería aplicada, las herramientas utilizadas y los resultados documentados de cada proyecto, distinguiendo los trabajos diseñados, simulados, implementados y evaluados experimentalmente.
 
-- **Telecommunications:** fiber-optic networks (FTTH/GPON), microwave radio links, and mobile networks.
-- **Network Infrastructure:** IP networking, network services, and virtualization.
-- **Wireless Communications and IoT:** LoRaWAN, MQTT, telemetry, and monitoring.
-- **Engineering Tools:** MATLAB, Node-RED, InfluxDB, Grafana, and technical documentation.
+## Áreas de conocimiento
 
-## Featured Projects
+- **Redes de telecomunicaciones:** fibra óptica FTTH/GPON, radioenlaces de microondas y redes móviles.
+- **Redes e infraestructura:** redes IP, servicios de red y virtualización.
+- **Comunicaciones inalámbricas e IoT:** LoRaWAN, MQTT y telemetría.
+- **Herramientas de ingeniería:** MATLAB, Node-RED, InfluxDB, Grafana y análisis de datos.
 
-| Project | Area | Work type |
+## Proyectos destacados
+
+| Proyecto | Área | Estado / tipo de trabajo |
 | --- | --- | --- |
-| FTTH/GPON Network Design | Fiber Optics | Academic design |
-| Microwave Radio Link — Ceragon IP-20N | Microwave Communications | Academic design |
-| LoRaWAN IoT Infrastructure | IoT | Academic project |
-| LTE Measurement Campaign | Mobile Networks | Academic project |
-| Satellite LoRa Gateway | Satellite Communications | Project in development |
-| CanSat Communications System | Wireless Communications | Academic design |
+| Diseño de red FTTH/GPON | Redes de fibra óptica | Diseño académico |
+| Radioenlace de microondas con Ceragon IP-20N | Radioenlaces | Diseño académico |
+| Infraestructura IoT LoRaWAN | Internet de las cosas | Trabajo académico |
+| Campaña de mediciones LTE | Redes móviles | Trabajo académico |
+| Gateway LoRa satelital | Comunicaciones satelitales | Proyecto en desarrollo |
+| Sistema de comunicaciones CanSat | Sistemas inalámbricos | Diseño académico |
 
-Individual project repositories will provide technical documentation and distinguish designed, simulated, implemented, and experimentally validated work.
+Los proyectos se publicarán progresivamente en **repositorios independientes**, con documentación, archivos técnicos y resultados disponibles. Los enlaces se incorporarán a medida que se prepare cada repositorio.
 
-## Portfolio Website
+## Portfolio web
 
-The website will be accessible after deployment via GitHub Pages:
+La página web estará disponible una vez completada su publicación con GitHub Pages:
 
-[Engineering-Portfolio Website](https://nicolasfontana-creator.github.io/engineering-portfolio/)
+[Visitar Engineering-Portfolio](https://nicolasfontana-creator.github.io/engineering-portfolio/)
 
-## Contact
+## Contacto
 
-[GitHub — NicolasFontana-creator](https://github.com/NicolasFontana-creator)
+- [Perfil de GitHub](https://github.com/NicolasFontana-creator)
 
 ---
 
-<sub>Website maintenance: [Development Guide](docs/DEVELOPMENT.md) · [Deployment Guide](docs/DEPLOYMENT.md)</sub>
+<sub>Documentación para mantener este sitio: [Desarrollo local](docs/DEVELOPMENT.md) · [Publicación](docs/DEPLOYMENT.md).</sub>
