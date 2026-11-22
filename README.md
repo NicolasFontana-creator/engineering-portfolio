@@ -1,36 +1,41 @@
 # Engineering-Portfolio
 
-Professional portfolio showcasing the academic and technical projects of an advanced Electronic Engineering student, with a focus on telecommunications, networking, and electronic systems.
+**Electronic Engineering Student Portfolio**
 
-## Estructura
+Professional portfolio showcasing academic and technical projects developed during my Electronic Engineering studies at Universidad Tecnológica Nacional — Facultad Regional Paraná (UTN-FRP).
 
-- `src/pages`: página principal y futuras rutas.
-- `src/components`: componentes reutilizables.
-- `src/data`: catálogo editable de proyectos.
-- `src/layouts`: estructura HTML compartida.
-- `src/styles`: estilos responsive.
-- `.github/workflows`: publicación automatizada en GitHub Pages.
+My work focuses on telecommunications, networking, wireless communications, electronic systems, and data acquisition and visualization.
 
-## Desarrollo local
+## Areas of Technical Knowledge
 
-Requiere una versión de Node.js compatible con Astro 6.
+- **Telecommunications:** fiber-optic networks (FTTH/GPON), microwave radio links, and mobile networks.
+- **Network Infrastructure:** IP networking, network services, and virtualization.
+- **Wireless Communications and IoT:** LoRaWAN, MQTT, telemetry, and monitoring.
+- **Engineering Tools:** MATLAB, Node-RED, InfluxDB, Grafana, and technical documentation.
 
-```bash
-npm install
-npm run dev
-```
+## Featured Projects
 
-Para compilar y revisar localmente:
+| Project | Area | Work type |
+| --- | --- | --- |
+| FTTH/GPON Network Design | Fiber Optics | Academic design |
+| Microwave Radio Link — Ceragon IP-20N | Microwave Communications | Academic design |
+| LoRaWAN IoT Infrastructure | IoT | Academic project |
+| LTE Measurement Campaign | Mobile Networks | Academic project |
+| Satellite LoRa Gateway | Satellite Communications | Project in development |
+| CanSat Communications System | Wireless Communications | Academic design |
 
-```bash
-npm run build
-npm run preview
-```
+Individual project repositories will provide technical documentation and distinguish designed, simulated, implemented, and experimentally validated work.
 
-## Publicación
+## Portfolio Website
 
-En GitHub, seleccioná **Settings → Pages → Build and deployment → Source: GitHub Actions**. El workflow `deploy.yml` construye y despliega el sitio al subir cambios a `main`.
+The website will be accessible after deployment via GitHub Pages:
 
-## Incorporar proyectos
+[Engineering-Portfolio Website](https://nicolasfontana-creator.github.io/engineering-portfolio/)
 
-Actualizá `src/data/projects.ts`. Cuando cada proyecto tenga su propio repositorio, añadí su enlace en la propiedad opcional `url`. No publiques información sensible ni resultados experimentales no verificados.
+## Contact
+
+[GitHub — NicolasFontana-creator](https://github.com/NicolasFontana-creator)
+
+---
+
+<sub>Website maintenance: [Development Guide](docs/DEVELOPMENT.md) · [Deployment Guide](docs/DEPLOYMENT.md)</sub>
