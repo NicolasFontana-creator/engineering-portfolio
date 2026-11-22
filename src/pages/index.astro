@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+const skills = [
+  ['Telecomunicaciones', 'FTTH/GPON · Radioenlaces · LTE · Redes de transporte'],
+  ['Redes e infraestructura', 'Redes IP · VLAN · Servicios · Virtualización'],
+  ['IoT y procesamiento de datos', 'LoRaWAN · MQTT · Node-RED · InfluxDB · Grafana'],
+  ['Herramientas de ingeniería', 'MATLAB · Simulación · Adquisición y visualización de datos'],
+];
+---
+<BaseLayout title="Engineering-Portfolio | Electronic Engineering" description="Engineering-Portfolio: portfolio académico y técnico de un estudiante avanzado de Ingeniería Electrónica.">
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home"><span class="logo-square">EF</span> Engineering-<b>Portfolio</b></a>
+      <nav aria-label="Navegación principal">
+        <a href="#home">Home</a><a href="#about">About Me</a><a href="#projects">Projects</a><a href="#skills">Technical Skills</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">ELECTRONIC ENGINEERING · PORTFOLIO</span>
+          <h1>Engineering ideas.<br/><em>Technical solutions.</em></h1>
+          <p class="lead">Estudiante avanzado de Ingeniería Electrónica, orientado al diseño de sistemas de telecomunicaciones, redes y tecnologías inalámbricas.</p>
+          <div class="actions"><a class="btn primary" href="#projects">Explorar proyectos ↗</a><a class="btn outline" href="#about">Conocer mi perfil</a></div>
+        </div>
+        <div class="signal" aria-hidden="true"><div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div><span>RF</span></div>
+      </div>
+    </section>
+    <section id="about" class="section alternate">
+      <div class="container two-col">
+        <div><span class="eyebrow">01 / ABOUT ME</span><h2>Ingeniería orientada a la <em>conectividad.</em></h2></div>
+        <div><p>Soy estudiante avanzado de Ingeniería Electrónica en la Universidad Tecnológica Nacional, Facultad Regional Paraná (UTN-FRP).</p><p>Este portfolio presenta trabajos académicos y proyectos técnicos de análisis, diseño e implementación de sistemas de comunicaciones y tecnologías afines.</p><p>La documentación de cada proyecto diferenciará diseños, simulaciones, prototipos y resultados efectivamente comprobados.</p></div>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <div class="container">
+        <span class="eyebrow">02 / PROJECTS</span><h2>Proyectos <em>seleccionados.</em></h2>
+        <p class="intro">Una selección de trabajos de ingeniería. Los enlaces a repositorios individuales se agregarán conforme se publique su documentación.</p>
+        <div class="project-grid">{projects.map((project,index) => <ProjectCard project={project} index={index} />)}</div>
+      </div>
+    </section>
+    <section id="skills" class="section alternate">
+      <div class="container">
+        <span class="eyebrow">03 / TECHNICAL SKILLS</span><h2>Áreas de <em>conocimiento.</em></h2>
+        <div class="skill-grid">{skills.map(([heading,detail],index) => <article class="skill"><span class="eyebrow">0{index+1}</span><h3>{heading}</h3><p>{detail}</p></article>)}</div>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <span class="eyebrow">04 / CONTACT</span><h2>Conectemos <em>ideas.</em></h2><p>Explorá mis proyectos técnicos y seguí las actualizaciones en GitHub.</p>
+        <a class="btn primary" href="https://github.com/NicolasFontana-creator" target="_blank" rel="noopener noreferrer">Visitar mi GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">© {new Date().getFullYear()} · Engineering-Portfolio <span>Astro · GitHub Pages</span></div></footer>
+</BaseLayout>
