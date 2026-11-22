@@ -1,2 +1,2 @@
-# engineering-portfolio
-Professional portfolio showcasing Electronic Engineering projects focused on telecommunications, network infrastructure, wireless communications, and IoT systems.
+# Electronic Engineering Student Portfolio
+Professional portfolio showcasing the academic and technical projects of an advanced Electronic Engineering student, with a focus on telecommunications, networking, and electronic systems.
