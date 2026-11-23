@@ -1,5 +1,8 @@
 ---
 layout: ../../layouts/ProjectDetail.astro
+lang: es
+alternatePath: en/projects/ftth-gpon/
+repository: https://github.com/NicolasFontana-creator/ftth-gpon-network-design
 title: Diseño de red FTTH/GPON en Paraná
 description: Diseño académico de una red subterránea GPON para 246 unidades potenciales en ocho manzanas de Paraná.
 ---
@@ -7,6 +10,8 @@ description: Diseño académico de una red subterránea GPON para 246 unidades p
 Proyecto académico de Nicolás Nahuel Fontana para Telefonía, Ingeniería Electrónica, UTN Facultad Regional Paraná.
 
 En ocho manzanas se relevaron **223 viviendas y 23 comercios o galpones**. El diseño propone una planta externa subterránea para evitar aumentar la ocupación aérea. El recorrido de cada fibra permite estudiar cuánto derivar en cada esquina y qué potencia conservar para los abonados de las siguientes cajas.
+
+**Objetivos.** Dimensionar los puertos y las salidas por etapa de penetración, definir el trazado subterráneo y verificar el margen óptico de cada rama en ambos sentidos.
 
 [Arquitectura y equipamiento](#arquitectura) · [Cómo empezar el despliegue](#metodologia) · [Presupuesto óptico](#presupuesto-optico) · [Diseño subterráneo](#infraestructura-subterranea) · [Fuentes y recomendaciones](#referencias)
 
@@ -132,6 +137,10 @@ El TP utilizó MATLAB para representar estos niveles calculados (pp. 56–57).
 
 La microzanja es una técnica de referencia. La selección de método y dimensiones por tramo exige replanteo, identificación de interferencias y condiciones municipales. El plano del TP es una propuesta de infraestructura. [Índice normativo](#referencias).
 
+## Conclusiones del diseño
+
+A plena penetración, cuatro puertos ofrecen 256 posiciones para 246 unidades potenciales. La habilitación por etapas depende de dónde se concentren las altas. En el modelo, CTO1 condiciona la sensibilidad y CTO4 la sobrecarga. El menor margen es de 4,92 dB, en bajada hacia CTO1. Para aceptar una red construida harían falta las longitudes reales de los tramos y mediciones por recorrido.
+
 <h2 id="referencias">Fuentes y recomendaciones</h2>
 
 **Fuente primaria:** Nicolás Nahuel Fontana, *Red de acceso telefónica*, TP N.º 1 de Telefonía, Ingeniería Electrónica, UTN Facultad Regional Paraná. Versión utilizada: `TPN1_RelevamientoRed_FontanaNicolas_2026.pdf`. Relevamiento y demanda: pp. 6–28. Equipos y topología: pp. 29–41 y 68–71. Cálculos: pp. 42–56. Planta subterránea y penetración: pp. 57–66 y 72.
@@ -151,4 +160,4 @@ La microzanja es una técnica de referencia. La selección de método y dimensio
 
 Las recomendaciones aportan criterios de ingeniería. La relación 1:64, la reserva de 3 dB, los porcentajes de cada divisor y la cantidad de cámaras son decisiones de este proyecto.
 
-[Repositorio técnico](https://github.com/NicolasFontana-creator/ftth-gpon-network-design) · [English project overview](https://github.com/NicolasFontana-creator/ftth-gpon-network-design/blob/main/README.en.md)
+[English project overview](https://github.com/NicolasFontana-creator/ftth-gpon-network-design/blob/main/README.en.md)
