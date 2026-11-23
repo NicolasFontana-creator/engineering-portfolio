@@ -23,6 +23,10 @@ En el obstáculo a 2,44 km se estimaron árboles de 20 m. El TP compara la recta
 
 En ambos extremos, la unidad interior **Ceragon FibeAir IP‑20N** se conecta mediante la tarjeta **RIC‑D** a la unidad exterior **RFU‑D**. El tramo interior–exterior transporta datos digitales. La RFU realiza la modulación y se acopla a la antena **RFS SC1‑220**, de **0,30 m**, con ganancia adoptada de **35,5 dBi** por extremo. El presupuesto supone montaje directo. La compatibilidad mecánica definitiva depende de la variante de antena y del adaptador (pp. 34–38 y 43–51).
 
+![Dos nodos IP-20N con tarjeta RIC-D, cable Ethernet, RFU-D y antena SC1-220, unidos por un vano con dos zonas de Fresnel.](../../assets/microondas/arquitectura-del-enlace.svg)
+
+Leé el esquema desde la IDU de Villa Fontana hasta la IDU de Aldea María Luisa. La tarjeta RIC-D conecta cada nodo de acceso por Ethernet con su RFU-D. Entre las antenas SC1-220, la línea discontinua indica la línea de vista. Las flechas r₁ y r₂ indican los radios hasta los límites de la primera y segunda zona de Fresnel en el centro del salto. Es un esquema conceptual sin escala.
+
 Para la interconexión se proyectaron **35 m de cable de cobre por estación**, con fibra como alternativa. Las pérdidas del cable de datos se evalúan por separado del trayecto radioeléctrico. Los planos estudian shelter, gabinete exterior, rack y puesta a tierra como alternativas de instalación (pp. 23–38 y 51–56).
 
 ## Canal y presupuesto de enlace
