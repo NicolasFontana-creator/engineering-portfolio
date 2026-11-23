@@ -1,5 +1,8 @@
 ---
 layout: ../../layouts/ProjectDetail.astro
+lang: es
+alternatePath: en/projects/ftth-gpon/
+repository: https://github.com/NicolasFontana-creator/ftth-gpon-network-design
 title: Diseño de red FTTH/GPON en Paraná
 description: Diseño académico de una red subterránea GPON para 246 unidades potenciales en ocho manzanas de Paraná.
 ---
@@ -8,11 +11,15 @@ Proyecto académico de Nicolás Nahuel Fontana para Telefonía, Ingeniería Elec
 
 En ocho manzanas se relevaron **223 viviendas y 23 comercios o galpones**. El diseño propone una planta externa subterránea para evitar aumentar la ocupación aérea. El recorrido de cada fibra permite estudiar cuánto derivar en cada esquina y qué potencia conservar para los abonados de las siguientes cajas.
 
+**Objetivos.** Dimensionar los puertos y las salidas por etapa de penetración, definir el trazado subterráneo y verificar el margen óptico de cada rama en ambos sentidos.
+
 [Arquitectura y equipamiento](#arquitectura) · [Cómo empezar el despliegue](#metodologia) · [Presupuesto óptico](#presupuesto-optico) · [Diseño subterráneo](#infraestructura-subterranea) · [Fuentes y recomendaciones](#referencias)
 
 <h2 id="arquitectura">Arquitectura y equipamiento</h2>
 
 ![Recorrido óptico representativo](../../assets/ftth/arquitectura.svg)
+
+<div class="table-scroll" role="region" aria-label="Equipamiento por tramo" tabindex="0">
 
 | Tramo | Selección del TP y función |
 |---|---|
@@ -21,7 +28,11 @@ En ocho manzanas se relevaron **223 viviendas y 23 comercios o galpones**. El di
 | ODN · distribución | CTO con divisores 1×2 y cajas NAP independientes con PLC 1×8 y salidas SC/APC. La CTO organiza el reparto troncal/local; la NAP ofrece las salidas para acometidas. |
 | Abonado · ONU/ONT | TP-Link XC220-G3v V2, terminal del abonado considerada clase B+ en el cálculo. ONU es el término general y ONT identifica aquí la terminación instalada en la vivienda o comercio. |
 
+</div>
+
 **ODN** (*Optical Distribution Network*) designa el conjunto pasivo entre OLT y ONT. La unidad de FTTH incluye distribuidores, cables, splitters, empalmes, conectores y elementos de planta externa (unidad, pp. PDF 128–131). El TP define los equipos concretos (pp. 29–39 y 68–71).
+
+<div class="table-scroll" role="region" aria-label="División óptica por CTO" tabindex="0">
 
 | CTO | Continuidad hacia la siguiente | Derivación |
 |---|---:|---|
@@ -29,6 +40,8 @@ En ocho manzanas se relevaron **223 viviendas y 23 comercios o galpones**. El di
 | 2 | 70 % | 30 % hacia 50/50 local |
 | 3 | 55 % | 45 % hacia 50/50 local |
 | 4 | Fin de cascada | Un solo 50/50 terminal hacia las dos NAP |
+
+</div>
 
 Los porcentajes son fracciones nominales de la potencia incidente. En el balance se usa la pérdida de inserción real adoptada por salida. Así, aunque CTO4 está al final, su recorrido evita una etapa de derivación asimétrica local y tiene la potencia calculada más alta de los cuatro.
 
@@ -44,11 +57,15 @@ El relevamiento visual de ocho manzanas en Paraná identificó acceso por cobre,
 
 ### 2. Separar cobertura, puertos activos y altas
 
+<div class="table-scroll" role="region" aria-label="Abonados y puertos por escenario" tabindex="0">
+
 | Penetración supuesta | Abonados de diseño, redondeados hacia arriba | Mínimo de puertos a 64 abonados/puerto |
 |---|---:|---:|
 | 40 % | 99 | 2 |
 | 70 % | 173 | 3 |
 | 100 % | 246 | 4 |
+
+</div>
 
 Se aplica techo dos veces: primero a 246 × penetración y después al cociente entre abonados y 64. Es un dimensionamiento agregado. Cada sector debe disponer de salidas de NAP conectadas a los puertos activos donde se produzcan las altas. La relación 1:64 es una decisión del proyecto. El ancho de banda del puerto se comparte entre abonados (TP, pp. 25–30).
 
@@ -66,14 +83,20 @@ Como paso ejecutivo, contrastar el trazado con servicios existentes, permisos lo
 
 **Método.** Para cada abonado se suman en dB las pérdidas de las ramas efectivamente atravesadas. Potencia recibida [dBm] = potencia transmitida [dBm] − pérdida del camino [dB]. El margen por sensibilidad es la potencia recibida mínima menos la sensibilidad. La holgura frente a sobrecarga es el umbral de sobrecarga menos la potencia recibida máxima. Marco de interfaces: [UIT-T G.984.2](#referencias). Método docente: unidad FTTH, «ODN – Cálculo de Enlace», p. PDF 120. Valores de diseño: TP final, pp. 42–56.
 
+<div class="table-scroll" role="region" aria-label="Potencias de emisión y recepción" tabindex="0">
+
 | Sentido | Transmisor mín. / máx. | Receptor | Sensibilidad / sobrecarga |
 |---|---|---|---|
 | Bajada | OLT C+, +3 / +7 dBm | ONT B+ | −27 / −8 dBm |
 | Subida | ONT B+, +0,5 / +5 dBm | OLT C+ | −32 / −12 dBm |
 
+</div>
+
 El TP usa un coeficiente único de 0,35 dB/km en el feeder en ambos sentidos. El presupuesto no desglosa el coeficiente por longitud de onda. Se omiten las pequeñas longitudes individuales entre CTO. La reserva de diseño exigida es 3 dB; su comprobación en el modelo no sustituye la medición del enlace instalado.
 
 ### Pérdidas del modelo
+
+<div class="table-scroll" role="region" aria-label="Pérdidas por elemento" tabindex="0">
 
 | Elemento | Pérdida adoptada |
 |---|---:|
@@ -84,9 +107,13 @@ El TP usa un coeficiente único de 0,35 dB/km en el feeder en ambos sentidos. El
 | Divisor 55/45, salidas 55 y 45 % | 3,1 / 4,0 dB |
 | Salida 50/50, salida 1×8 y conexión final | 3,6 + 11 + 0,5 dB |
 
+</div>
+
 **Ejemplo CTO1:** 1 + 0,58 + 1 + 7,4 + 3,6 + 11 + 0,5 = 25,08 dB. En bajada mínima, +3 − 25,08 = −22,08 dBm. El margen de 4,92 dB supera por 1,92 dB la reserva requerida.
 
 ### Resultados recalculados con los supuestos del TP
+
+<div class="table-scroll" role="region" aria-label="Presupuesto óptico por CTO" tabindex="0">
 
 | CTO | Pérdida (dB) | Bajada mín. / máx. (dBm) | Margen sensibilidad / sobrecarga (dB) | Subida mín. / máx. (dBm) | Margen sensibilidad / sobrecarga (dB) |
 |---|---:|---|---|---|---|
@@ -94,6 +121,8 @@ El TP usa un coeficiente único de 0,35 dB/km en el feeder en ambos sentidos. El
 | 2 | 24,78 | −21,78 / −17,78 | 5,22 / 9,78 | −24,28 / −19,78 | 7,72 / 7,78 |
 | 3 | 24,88 | −21,88 / −17,88 | 5,12 / 9,88 | −24,38 / −19,88 | 7,62 / 7,88 |
 | 4 | 23,98 | −20,98 / −16,98 | 6,02 / 8,98 | −23,48 / −18,98 | 8,52 / 6,98 |
+
+</div>
 
 **Trazabilidad de dos diferencias.** Para CTO3, el TP informa −24,3 dBm y 7,7 dB en subida mínima (pp. 52 y 54). Su propia suma da −21,8 − 1 − 0,58 − 1 = −24,38 dBm y 7,62 dB. Para CTO4, la p. 56 informa una holgura de 7,98 dB en subida máxima. Con los valores allí indicados, −12 − (−18,98) = 6,98 dB. Ambas correcciones conservan el cumplimiento del criterio académico de 3 dB. CTO1 condiciona la sensibilidad y CTO4 queda más cerca de la sobrecarga en ambos sentidos.
 
@@ -121,6 +150,8 @@ El TP utilizó MATLAB para representar estos niveles calculados (pp. 56–57).
 
 **Criterio de trazado.** El TP lleva la canalización principal por calles del área y sitúa cámaras principales cerca de intersecciones. Desde la vía pública se puede cambiar de dirección, derivar a otra calle y acceder a las CTO y reservas de cable. Separar los accesos comunes de los ingresos a cada propiedad facilita altas y reparaciones posteriores (TP, pp. 57–61).
 
+<div class="table-scroll" role="region" aria-label="Infraestructura por nivel" tabindex="0">
+
 | Nivel físico | Función en el diseño | Referencia asociada |
 |---|---|---|
 | Canalización principal | Aloja feeder y distribución. La obra común se proyecta con reserva para ampliación. | L.205: planos y disposición de ductos. L.155: alternativa de zanja de bajo impacto. |
@@ -128,15 +159,23 @@ El TP utilizó MATLAB para representar estos niveles calculados (pp. 56–57).
 | Microducto y cámara secundaria | Derivación hacia grupos de viviendas; se propone como criterio una cámara secundaria por par de viviendas próximas. | L.205: documentación del trazado. L.259: inspección y reparación de conductos plásticos. |
 | Acometida | Desde cámara secundaria al límite de propiedad; el cable drop ingresa hasta la ONT. | L.250: relación entre distribución y acceso final. TP § 4.6.4: solución del proyecto. |
 
+</div>
+
 **Cantidades de anteproyecto** (TP, p. 72): 29 cámaras principales, 112 secundarias, 5.000 m de ducto principal, 560 m de microductos y 32 pilares. El TP estima los microductos como 112 × 5 m. La longitud del ducto para toda el área y la del feeder de 1,66 km describen magnitudes distintas.
 
 La microzanja es una técnica de referencia. La selección de método y dimensiones por tramo exige replanteo, identificación de interferencias y condiciones municipales. El plano del TP es una propuesta de infraestructura. [Índice normativo](#referencias).
+
+## Conclusiones del diseño
+
+A plena penetración, cuatro puertos ofrecen 256 posiciones para 246 unidades potenciales. La habilitación por etapas depende de dónde se concentren las altas. En el modelo, CTO1 condiciona la sensibilidad y CTO4 la sobrecarga. El menor margen es de 4,92 dB, en bajada hacia CTO1. Para aceptar una red construida harían falta las longitudes reales de los tramos y mediciones por recorrido.
 
 <h2 id="referencias">Fuentes y recomendaciones</h2>
 
 **Fuente primaria:** Nicolás Nahuel Fontana, *Red de acceso telefónica*, TP N.º 1 de Telefonía, Ingeniería Electrónica, UTN Facultad Regional Paraná. Versión utilizada: `TPN1_RelevamientoRed_FontanaNicolas_2026.pdf`. Relevamiento y demanda: pp. 6–28. Equipos y topología: pp. 29–41 y 68–71. Cálculos: pp. 42–56. Planta subterránea y penetración: pp. 57–66 y 72.
 
 **Material docente:** *Unidad 4 – FTTH*, archivo `Unida Redes FFTH.pdf`. La p. 120 del PDF (lámina 122) introduce el cálculo de enlace; pp. 128–131 del PDF (láminas 130–133) presentan la ODN y sus componentes. Se utiliza para ordenar conceptos y funciones. Las cantidades y los resultados numéricos proceden del TP.
+
+<div class="table-scroll" role="region" aria-label="Referencias técnicas" tabindex="0">
 
 | Referencia | Aplicación en el proyecto |
 |---|---|
@@ -149,6 +188,8 @@ La microzanja es una técnica de referencia. La selección de método y dimensio
 | [UIT-T L.258](https://www.itu.int/rec/T-REC-L.258/en) (antes L.63) | Seguridad en instalaciones exteriores. |
 | [UIT-T L.259](https://www.itu.int/rec/T-REC-L.259/en) (antes L.73) | Inspección y reparación de conductos plásticos enterrados. |
 
+</div>
+
 Las recomendaciones aportan criterios de ingeniería. La relación 1:64, la reserva de 3 dB, los porcentajes de cada divisor y la cantidad de cámaras son decisiones de este proyecto.
 
-[Repositorio técnico](https://github.com/NicolasFontana-creator/ftth-gpon-network-design) · [English project overview](https://github.com/NicolasFontana-creator/ftth-gpon-network-design/blob/main/README.en.md)
+[English project overview](https://github.com/NicolasFontana-creator/ftth-gpon-network-design/blob/main/README.en.md)
