@@ -53,7 +53,10 @@ jobs:
                   assert link[1:] in page.sections, link
               elif link.startswith("/"):
                   assert link.startswith(base), link
-                  assert (Path("dist") / link.removeprefix(base)).is_file(), link
+                  target = Path("dist") / link.removeprefix(base)
+                  if target.is_dir():
+                      target = target / "index.html"
+                  assert target.is_file(), link
           PY
       - uses: actions/upload-pages-artifact@v5.0.0
         if: github.event_name == 'push'
