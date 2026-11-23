@@ -19,6 +19,8 @@ An eight-block survey identified **223 homes and 23 businesses or warehouses** i
 
 The central office uses a TP-Link DS-P7001-08 OLT with eight GPON ports. Each active port uses a DS-PMA-C+ optical module. A 1.66 km, 12-fibre feeder connects the SC/UPC central distribution frame to the SC/APC distribution point. Subscriber equipment is the TP-Link XC220-G3v V2 ONT, modelled as class B+.
 
+<div class="table-scroll" role="region" aria-label="Power split by terminal" tabindex="0">
+
 | Terminal | Power passed to the next terminal | Local distribution |
 |---|---:|---|
 | CTO1 | 80% | 20% to a local 50/50 splitter |
@@ -26,17 +28,23 @@ The central office uses a TP-Link DS-P7001-08 OLT with eight GPON ports. Each ac
 | CTO3 | 55% | 45% to a local 50/50 splitter |
 | CTO4 | End of feeder cascade | One terminal 50/50 splitter |
 
+</div>
+
 Each local 50/50 splitter feeds two eight-way network access points (NAPs), one for initial service and one for expansion. The percentages apply to the power entering each splitter. The budget uses the insertion loss of the specific output traversed by the signal.
 
 ## Deployment method
 
 Round the projected subscriber count up, then divide by 64 and round up again to obtain the minimum number of active GPON ports.
 
+<div class="table-scroll" role="region" aria-label="Subscribers and ports by take-up" tabindex="0">
+
 | Take-up assumption | Subscribers | Minimum active ports |
 |---|---:|---:|
 | 40% | 99 | 2 |
 | 70% | 173 | 3 |
 | 100% | 246 | 4 |
+
+</div>
 
 Plan the shared ducts and chambers for full coverage before equipping individual branches. At 40% take-up, activating just one eight-way NAP at each of four terminals on two ports provides only 64 outlets for 99 subscribers. The locations of the first connections therefore determine which expansion NAPs must be fitted.
 
@@ -46,12 +54,16 @@ The preliminary underground design calls for 29 main chambers, 112 secondary cha
 
 Received power in dBm equals transmitted power in dBm minus path loss in dB. The study assigns 1 dB to each of two distribution connections, 0.58 dB to the feeder (1.66 km at 0.35 dB/km), 3.6 dB to a 50/50 output, 11 dB to an eight-way output and 0.5 dB to the final connection. The asymmetric splitters add 1.3/7.4 dB (80/20), 1.9/5.8 dB (70/30) and 3.1/4.0 dB (55/45), respectively.
 
+<div class="table-scroll" role="region" aria-label="Optical power budget by terminal" tabindex="0">
+
 | Path | Loss (dB) | Downstream at ONT, min / max (dBm) | Upstream at OLT, min / max (dBm) |
 |---|---:|---:|---:|
 | CTO1 | 25.08 | −22.08 / −18.08 | −24.58 / −20.08 |
 | CTO2 | 24.78 | −21.78 / −17.78 | −24.28 / −19.78 |
 | CTO3 | 24.88 | −21.88 / −17.88 | −24.38 / −19.88 |
 | CTO4 | 23.98 | −20.98 / −16.98 | −23.48 / −18.98 |
+
+</div>
 
 ### Downstream
 

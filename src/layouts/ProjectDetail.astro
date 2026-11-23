@@ -44,7 +44,9 @@ const otherLang = english ? 'es' : 'en';
   article :global(h2) { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-top: 3rem; font-size: clamp(1.6rem, 4vw, 2.3rem); }
   article :global(h3) { margin-top: 2rem; }
   article :global(img) { display: block; width: auto; max-width: 100%; height: auto; margin: 1.5rem auto; }
-  article :global(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin-block: 1.5rem; }
+  article :global(.table-scroll) { max-width: 100%; overflow-x: auto; margin-block: 1.5rem; }
+  article :global(.table-scroll:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+  article :global(table) { border-collapse: collapse; }
   article :global(th), article :global(td) { padding: .7rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
   article :global(th) { background: var(--panel); }
   article :global(code) { overflow-wrap: anywhere; }
