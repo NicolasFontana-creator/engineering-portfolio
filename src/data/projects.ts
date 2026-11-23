@@ -10,7 +10,7 @@ export interface Project {
 
 export const projects: Project[] = [
   { name: 'Diseño de red FTTH/GPON', area: 'Fibra óptica', page: 'proyectos/ftth-gpon/', description: 'Diseño académico de una red de acceso óptico, arquitectura de distribución y presupuesto de potencia.', status: 'Diseño académico', technologies: ['GPON', 'FTTH', 'Presupuesto óptico'] },
-  { name: 'Radioenlace de microondas', area: 'Radioenlaces', description: 'Evaluación de un enlace punto a punto utilizando equipos Ceragon IP-20N y márgenes de desvanecimiento.', status: 'Diseño académico', technologies: ['RF', 'Ceragon', 'Link budget'] },
+  { name: 'Radioenlace de microondas', area: 'Radioenlaces', page: 'proyectos/radioenlace-microondas/', description: 'Diseño de un enlace de 5,88 km entre Villa Fontana y Aldea María Luisa: perfil del terreno, zonas de Fresnel y presupuesto RF.', status: 'Diseño académico', technologies: ['RF', 'Ceragon', 'Link budget'] },
   { name: 'Infraestructura IoT LoRaWAN', area: 'Internet de las cosas', description: 'Adquisición y visualización de datos de nodos LoRaWAN mediante herramientas de monitoreo.', status: 'Trabajo académico', technologies: ['LoRaWAN', 'Node-RED', 'Grafana'] },
   { name: 'Campaña de mediciones LTE', area: 'Redes móviles', description: 'Registro y análisis de parámetros radioeléctricos de cobertura y cambios de celda.', status: 'Trabajo académico', technologies: ['LTE', 'RSRP', 'MATLAB'] },
   { name: 'Gateway LoRa satelital', area: 'Comunicaciones satelitales', description: 'Diseño de una estación receptora para el estudio de comunicaciones LoRa satelitales.', status: 'En desarrollo', technologies: ['LoRa', 'RF', 'ESP32'] },
