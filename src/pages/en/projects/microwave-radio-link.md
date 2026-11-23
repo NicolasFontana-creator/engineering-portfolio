@@ -23,6 +23,10 @@ Trees at the obstacle 2.44 km along the path were estimated to be 20 m tall. The
 
 At each site, a **Ceragon FibeAir IP‑20N** indoor unit uses a **RIC‑D** interface card to communicate with an outdoor **RFU‑D**. The indoor–outdoor connection carries digital data. The RFU performs modulation and couples to a **0.30 m RFS SC1‑220** antenna. The budget assumes **35.5 dBi** per antenna and direct mounting. Mechanical compatibility depends on the antenna variant and adapter (pp. 34–38 and 43–51).
 
+![Two IP-20N access nodes with RIC-D cards, Ethernet cables, RFU-D radios and SC1-220 antennas. Two Fresnel zones surround the line of sight.](../../../assets/microondas/arquitectura-del-enlace.svg)
+
+Follow the diagram from the Villa Fontana IDU to the Aldea María Luisa IDU. The RIC-D card connects each access node to its RFU-D over Ethernet. Between the SC1-220 antennas, the dashed line marks the line of sight. The arrows r₁ and r₂ show the radii to the first and second Fresnel boundaries at mid-path. The diagram is schematic and drawn without scale.
+
 The design allows **35 m of copper cable at each site**, with fibre as an alternative. Data cable attenuation is evaluated separately from microwave path loss. The installation drawings cover shelter, outdoor cabinet, rack and grounding proposals (pp. 23–38 and 51–56).
 
 ## Channel selection and RF link budget

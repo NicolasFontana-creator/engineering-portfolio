@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+<title id="title">Villa Fontana ↔ Aldea María Luisa · Ceragon IP-20N / RFU-D</title>
+<desc id="desc">Each station connects an IP-20N indoor unit with a RIC-D card to an RFU-D via Ethernet. The two SC1-220 antennas face each other. The inner and outer contours show the first and second Fresnel boundaries. Vertical arrows mark their radii from the line of sight. Schematic, not to scale.</desc>
+<defs><marker id="tip1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="#94f3e0"/></marker><marker id="tip2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L6 3L0 6Z" fill="#ffcd80"/></marker></defs>
+<rect width="800" height="500" rx="18" fill="#102137"/>
+<g font-family="system-ui, sans-serif" fill="#f1f7fc" text-anchor="middle">
+<text x="141" y="46" font-size="25" font-weight="650">Villa Fontana</text>
+<text x="659" y="46" font-size="25" font-weight="650">Aldea María Luisa</text>
+<ellipse cx="400" cy="155" rx="239" ry="88" fill="#403a34" stroke="#ffcd80" stroke-width="2.5" stroke-dasharray="8 4"/>
+<ellipse cx="400" cy="155" rx="239" ry="62.23" fill="#17434a" stroke="#94f3e0" stroke-width="2.5"/>
+<path d="M161 155H639" stroke="#f1f7fc" stroke-width="2" stroke-dasharray="9 5"/>
+<path d="M400 155V94" stroke="#94f3e0" stroke-width="2.5" marker-end="url(#tip1)"/>
+<path d="M400 155V242" stroke="#ffcd80" stroke-width="2.5" marker-end="url(#tip2)"/>
+<text x="424" y="128" font-size="24" fill="#94f3e0">r₁</text>
+<text x="424" y="199" font-size="24" fill="#ffcd80">r₂</text>
+<g transform="translate(141 0)">
+ <path d="M0 170V220M0 272V379" fill="none" stroke="#91adca" stroke-width="4"/>
+ <g transform="translate(0 155) scale(1 1)"><path d="M10 -27Q-21 0 10 27" fill="#708ca7" stroke="#e6f0f7" stroke-width="3"/><path d="M9 -26L20 0L9 26" fill="none" stroke="#c5d8e7" stroke-width="2"/><circle cx="20" r="4" fill="#f1f7fc"/></g>
+ <text y="104" font-size="20">SC1-220</text>
+ <rect x="-67" y="220" width="134" height="52" rx="8" fill="#293e55" stroke="#9bb6c9"/><text y="254" font-size="23">RFU-D</text>
+ <rect x="-56" y="308" width="112" height="30" rx="5" fill="#102137"/><text y="330" font-size="20">Ethernet</text>
+ <rect x="-107" y="371" width="214" height="104" rx="10" fill="#20344b" stroke="#95b1c6"/>
+ <rect x="-56" y="380" width="112" height="36" rx="6" fill="#194956" stroke="#8ed4d7"/><text y="405" font-size="21">RIC-D</text>
+ <text y="453" font-size="22" font-weight="650">IDU · IP-20N</text></g>
+<g transform="translate(659 0)">
+ <path d="M0 170V220M0 272V379" fill="none" stroke="#91adca" stroke-width="4"/>
+ <g transform="translate(0 155) scale(-1 1)"><path d="M10 -27Q-21 0 10 27" fill="#708ca7" stroke="#e6f0f7" stroke-width="3"/><path d="M9 -26L20 0L9 26" fill="none" stroke="#c5d8e7" stroke-width="2"/><circle cx="20" r="4" fill="#f1f7fc"/></g>
+ <text y="104" font-size="20">SC1-220</text>
+ <rect x="-67" y="220" width="134" height="52" rx="8" fill="#293e55" stroke="#9bb6c9"/><text y="254" font-size="23">RFU-D</text>
+ <rect x="-56" y="308" width="112" height="30" rx="5" fill="#102137"/><text y="330" font-size="20">Ethernet</text>
+ <rect x="-107" y="371" width="214" height="104" rx="10" fill="#20344b" stroke="#95b1c6"/>
+ <rect x="-56" y="380" width="112" height="36" rx="6" fill="#194956" stroke="#8ed4d7"/><text y="405" font-size="21">RIC-D</text>
+ <text y="453" font-size="22" font-weight="650">IDU · IP-20N</text></g>
+</g></svg>
