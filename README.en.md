@@ -22,7 +22,7 @@ Its purpose is to present the technical problem, engineering methodology, tools,
 | FTTH/GPON Network Design | Fiber-optic networks | Academic design |
 | Microwave Radio Link using Ceragon IP-20N | Microwave communications | Academic design |
 | LoRaWAN IoT Infrastructure | Internet of Things | Academic project |
-| LTE Measurement Campaign | Mobile networks | Academic project |
+| Cellular Network Planning and Coverage Analysis | Mobile networks | Academic project |
 | Satellite LoRa Gateway | Satellite communications | Project in development |
 | CanSat Communications System | Wireless systems | Academic design |
 

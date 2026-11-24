@@ -22,7 +22,7 @@ El objetivo es presentar el problema abordado, la metodología de ingeniería ap
 | Diseño de red FTTH/GPON | Redes de fibra óptica | Diseño académico |
 | Radioenlace de microondas con Ceragon IP-20N | Radioenlaces | Diseño académico |
 | Infraestructura IoT LoRaWAN | Internet de las cosas | Trabajo académico |
-| Campaña de mediciones LTE | Redes móviles | Trabajo académico |
+| Planificación y Análisis de Cobertura de Redes Celulares | Redes móviles | Trabajo académico |
 | Gateway LoRa satelital | Comunicaciones satelitales | Proyecto en desarrollo |
 | Sistema de comunicaciones CanSat | Sistemas inalámbricos | Diseño académico |
 
