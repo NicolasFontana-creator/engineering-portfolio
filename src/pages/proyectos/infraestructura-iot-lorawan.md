@@ -13,8 +13,6 @@ Para estudiar la gestión de recursos en ciudades inteligentes, el laboratorio r
 
 ![Ruta conceptual de nodos al gateway y TTN; integración documentada de MQTT con Node-RED, InfluxDB, FlowFuse, reportes PDF y Grafana.](../../assets/lorawan/arquitectura-es.svg)
 
-Las flechas discontinuas identifican el acceso propuesto en la referencia conceptual. El informe muestra nueve placas y la recepción de eventos MQTT. El modelo del gateway, el enlace de retorno y el alta en The Things Network (TTN) quedan pendientes de evidencia de configuración.
-
 ## Procesamiento y almacenamiento
 
 Node.js proporciona el entorno de ejecución del backend. Node-RED integra los eventos MQTT con el dashboard FlowFuse y las series de InfluxDB. Una llegada MQTT actualiza la tarjeta del sensor correspondiente; las estadísticas se consultan por separado, cada minuto.
