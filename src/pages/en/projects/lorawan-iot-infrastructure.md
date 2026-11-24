@@ -13,8 +13,6 @@ To study resource management in smart cities, the laboratory brought readings fr
 
 ![Conceptual sensor, gateway and TTN path; documented MQTT, Node-RED, InfluxDB, FlowFuse, PDF and Grafana integration.](../../../assets/lorawan/architecture-en.svg)
 
-Dashed arrows identify the access path in the conceptual reference. The report shows nine boards and incoming MQTT events. Gateway model, backhaul and registration with The Things Network (TTN) still require configuration evidence.
-
 ## Processing and storage
 
 Node.js provides the backend runtime. Node-RED connects MQTT events with FlowFuse Dashboard and InfluxDB time series. An incoming event updates the corresponding sensor card. Independently, the dashboard queries stored readings once a minute for statistics.
