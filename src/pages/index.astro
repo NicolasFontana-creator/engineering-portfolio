@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { projects } from '../data/projects';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const skills = [
   ['Telecomunicaciones', 'FTTH/GPON · Radioenlaces · LTE · Redes de transporte'],
   ['Redes e infraestructura', 'Redes IP · VLAN · Servicios · Virtualización'],
@@ -14,7 +15,7 @@ const skills = [
     <div class="container nav">
       <a class="logo" href="#home"><span class="logo-square">EF</span> Engineering-<b>Portfolio</b></a>
       <nav aria-label="Navegación principal">
-        <a href="#home">Home</a><a href="#about">About Me</a><a href="#projects">Projects</a><a href="#skills">Technical Skills</a><a href="#contact">Contact</a>
+        <a href="#home">Home</a><a href="#about">About Me</a><a href="#projects">Projects</a><a href="#coursework">Academic Coursework</a><a href="#skills">Technical Skills</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -41,6 +42,19 @@ const skills = [
         <span class="eyebrow">02 / PROJECTS</span><h2>Proyectos <em>seleccionados.</em></h2>
         <p class="intro">Una selección de trabajos de ingeniería. Los enlaces a repositorios individuales se agregarán conforme se publique su documentación.</p>
         <div class="project-grid">{projects.map((project,index) => <ProjectCard project={project} index={index} />)}</div>
+      </div>
+    </section>
+    <section id="coursework" class="section alternate" aria-labelledby="coursework-heading">
+      <div class="container">
+        <h2 id="coursework-heading">Trabajos <em>Universitarios</em></h2>
+        <article class="skill">
+          <h3>Técnicas Digitales III</h3>
+          <p>Diseño y comparación de filtros digitales FIR/IIR aplicados al procesamiento de señales ECG.</p>
+          <div class="actions">
+            <a class="btn outline" href={`${base}/trabajos-universitarios/filtros-ecg/`}>Ver trabajo en español</a>
+            <a class="btn outline" lang="en" hreflang="en" href={`${base}/en/coursework/ecg-filtering/`}>Read in English</a>
+          </div>
+        </article>
       </div>
     </section>
     <section id="skills" class="section alternate">
